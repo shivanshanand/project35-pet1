@@ -12,9 +12,9 @@
   function setup() {
     createCanvas(600, 500);
 
-    dog=createSprite(200,200,20,20)
+    dog=createSprite(250,300,20,20)
     dog.addImage(dogImg);
-    dog.scale=0.3;
+    dog.scale=0.2;
 
     database=firebase.database();
     foodStock=database.ref("Food");
@@ -26,7 +26,7 @@
 
     if(keyCode === UP_ARROW){
       writeStock(foodS);
-      dog.changeImage(dogImg2);
+      dog.addImage(dogImg2);
     }
 
     noStroke();
